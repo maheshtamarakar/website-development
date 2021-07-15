@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+.header{
+    background-color: rgb(129, 126, 126);
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 0 0 7rem 7rem;
+    box-shadow: -2px 10px 16px 9px rgba(0, 0, 0, 0.59);;
+    z-index: 9999;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10rem;
+    font-size: 2rem;
+    position: relative;
+
+
+}
+
+.nav-menu{
+    display: flex;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+.nav-link{
+    color: white;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    
+}
+.nav-link:hover{
+    background-color: orange;
+
+
+}
+
+.submenu{
+    position: relative;
+}
+.under-menu{
+    position: absolute;
+    background-color: gray;
+    opacity: 0;
+    width: 14rem;
+}
+.under-menu a{
+    display: block;
+}
+.submenu:hover .under-menu{
+    opacity: 1;
+    transition: all .5s ease;
+
+}
+.under-menu a{
+    padding: 1.2rem;
+    color: white;
+}
+/* hamburger menu button*/
+.hamburger{
+    display: none;
+
+}
+.bar{
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 2px 0;
+    border-radius: 5rem;
+    
+    transition: all .3s ease;
+
+
+}
+.box{
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+}
+.box img{
+    width: 15rem;
+    height: 15rem;
+}
+.overlay{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgb(248, 109, 85, .5);
+bottom: -100%;
+left: 0;
+transition: .3s linear;
+}
+.box:hover .overlay{
+    bottom: 0;
+}

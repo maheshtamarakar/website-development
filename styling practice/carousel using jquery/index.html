@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Carousel</title>
+</head>
+
+<body>
+    <div class="slider">
+        <div  class="active box">
+            <img src="img/blog-img-01.jpg" alt="">
+            <div class="overlay">
+
+            </div>
+
+        </div>
+        <div class="box">
+            <img src="img/blog-img-02.jpg" alt="">
+            <div class="overlay">
+ksahchcvc
+            </div>
+
+
+        </div>
+        <div class="box">
+            <img src="img/blog-img-03.jpg" alt="">
+            <div class="overlay">
+                mahedsh
+
+            </div>
+
+        </div>
+        <div class="box">
+            <img src="img/blog-img-04.jpg" alt="">
+            <div class="overlay">
+shrishti
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function slides() {
+                $current = $('.slider .box.active');
+                if ($current.length == 0) {
+                    $current.addClass('active');
+                }
+                else {
+                    $next = $current.removeClass('active').next();
+                    if ($next.length == 0) {
+                        $('.slider .box:first-child').addClass('active');
+                    }
+                    else {
+                        $next.addClass('active');
+                    }
+
+                }
+            }
+            setInterval(slides, 2000);
+            
+        })
+    </script>
+</body>
+
+</html>

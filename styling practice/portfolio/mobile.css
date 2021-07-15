@@ -1,0 +1,42 @@
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    z-index: 3;
+  }
+  .navbar {
+    text-align: center;
+  }
+  .nav-menu {
+    width: 100%;
+    position: fixed;
+    background-color: darkviolet;
+    flex-direction: column;
+    color: white;
+    left: 0;
+    height: 100vh;
+    top: -100%;
+    transition: all .3s ease;
+    
+  }
+  .nav-item{
+      margin: 1.3rem 0;
+      font-size: 3rem;
+  }
+  .nav-item:nth-child(1){
+      margin-top: 9.3rem
+      ;
+  }
+  .nav-menu.active {
+      top: 0;
+  }
+  .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}

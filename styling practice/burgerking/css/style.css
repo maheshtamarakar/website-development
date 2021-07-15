@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+
+.header{
+    background-color: red;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 1.7rem;
+}
+.nav-logo{
+    color: var(--main-bg-color);
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+.nav-logo span{
+    color: var(--green);
+    transition: .8s;
+
+}
+.nav-logo span:hover{
+    color: var(--main-bg-color);
+
+}
+.nav-menu{
+    display: flex;
+    transition: all .5s ease;
+
+
+}
+.nav-item{
+    margin-right: 2rem;
+}
+.nav-link{
+    color: white;
+    font-weight: 600;
+}
+.nav-link:hover{
+    color: var(--main-bg-color);
+}
+
+.page-menu{
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    transition: .5s;
+    display: none;
+    transition: all .5s ease;
+
+    
+
+}
+.pages:hover .page-menu{
+    opacity: 1;
+    display: block;
+    }
+.page-item{
+    margin: 1.5rem;
+    margin-right: 4rem;
+}
+
+/* hamburger menu */
+.hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bar{
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 2px;
+    border-radius: 2rem;
+    transition: all .5s ease;
+
+}
